@@ -3,7 +3,6 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     repositories {
-        mavenCentral()
         maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
     }
     dependencies {
@@ -99,7 +98,6 @@ distTar.enabled = false
 distZip.enabled = false
 
 repositories {
-    jcenter()
     maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
 }
 
