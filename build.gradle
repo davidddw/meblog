@@ -88,6 +88,16 @@ ospackage {
         into '/etc/nginx/cert/'
     }
 
+    from('build/resources/main/conf/wwwd05660.pem') {
+        fileMode 0640
+        into '/etc/nginx/cert/'
+    }
+
+    from('build/resources/main/conf/ssl-all-servers.conf') {
+        fileMode 0640
+        into '/etc/nginx/includes/'
+    }
+
     from('build/webapp') {
         fileMode 0755
         into '/var/www/webroot'
