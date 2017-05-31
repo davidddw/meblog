@@ -100,7 +100,7 @@ public class NovelChapterServiceImpl extends ServiceImpl<NovelChapterMapper, Nov
         BufferedReader br = null;
         BufferedWriter bw = null;
         List<NovelChapter> novelChapters = new ArrayList<>();
-        Pattern pp = Pattern.compile("第[0-9\\u4e00-\\u9fa5]+章[\\s]*[\\S\\u4e00-\\u9fa5]+");
+        Pattern pp = Pattern.compile("第[0-9]+章[\\s]*[\\S\\u4e00-\\u9fa5]+");
         boolean success = false;
         try {
             br = new BufferedReader(new FileReader(srcFilePath));

@@ -2399,7 +2399,7 @@ function initNovelChapter() {
         jsonData.location = $novel_location.val();
 
         $.addNewObject(url, JSON.stringify(jsonData), function (data) {
-            if (data.result) {
+            if (data.result > 0) {
                 $.toastSuccess("添加类别成功!!!");
                 $novel_name.val("");
                 $novel_location.val("");

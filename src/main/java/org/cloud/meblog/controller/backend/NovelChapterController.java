@@ -57,7 +57,10 @@ public class NovelChapterController extends AdminBaseController {
     public @ResponseBody
     Result addNovelChapter(@RequestBody NovelData novelData) {
         List<NovelChapter> novelChapters = novelChapterService.getNovelChapterFromFile(Long.parseLong(novelData.getId()), novelData.getLocation());
-        long number = novelChapterService.saveNovelChapterByBatch(novelChapters);
+        long number = 0;
+        if(!novelChapters.isEmpty()) {
+            number = novelChapterService.saveNovelChapterByBatch(novelChapters);
+        }
         return new Result(String.valueOf(number));
     }
 

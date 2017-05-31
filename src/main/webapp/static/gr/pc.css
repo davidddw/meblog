@@ -181,11 +181,11 @@
     .inner{clear:both;overflow:hidden;background:#fcfcfc}
     .details{padding:0 15px;border:1px solid #ddd}
     .novellabel{display:inline-block;margin-bottom:2px;margin-left:9pt;width:4px;height:1pc;background:#ff9d00;vertical-align:middle}
-    .article .inner{border-right:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;border-left:1px solid #d8d8d8;background:#f6f4ec}
+    .article .inner{border-right:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;border-left:1px solid #d8d8d8;background:#f6f4ec;}
     .article h1{padding-top:20px;height:40px;text-align:center;font-weight:700;font-size:20px;line-height:40px}
     .article .xb{border-top:none}
     .article .link a{margin:0 10px;color:#007e8c}
-    .article #BookText{margin-bottom:50px;padding:5px 50px;word-wrap:break-word;font-size:18px;font-family:Microsoft YaHei,PingFangSC-Regular,HelveticaNeue-Light,Helvetica Neue Light,sans-serif;word-break:break-all}
+    .article #BookText{margin-bottom:50px;padding:5px 102px;word-wrap:break-word;font-size:18px;font-family:arial,'Hiragino Sans GB','Microsoft Yahei','微软雅黑','宋体',STHeiti,sans-serif;word-break:break-all}
     .article p{clear:both;margin:.8em 0;color:#4d4d4d;text-indent:2.2em;line-height:2}
     .zhuan{margin-top:50px;margin-left:-50px;padding:30px 0 30px 50px;width:785px;background:#fafafa;font-size:17px}
     #lmsing{overflow:hidden;padding:50px 0;width:825px;border-bottom:2px dashed #f2f1f1;background:#fff}
@@ -332,9 +332,9 @@
     .post_list li .cates{position:absolute;right:10px;bottom:10px;left:10px;overflow:hidden;height:18px}
     .post_list li .cates a{display:inline-block;margin-right:4px;padding:0 4px;height:18px;border-radius:3px;background:#4eaade;color:#fff;font-size:9pt;line-height:18px;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
     .post_list li .cates a:hover{background:#000;color:#fff}
-    .inner .title{margin:0 50px;padding:50px 0 15px;border-bottom:1px solid #e2dfd2;text-align:center}
-    .inner .title h1{font-size:28px}
-    .inner .title .info{margin-top:30px;color:#999;font-size:14px;line-height:25px}
+    .inner .title{margin:0 102px;padding:50px 0 10px;border-bottom:1px solid #e2dfd2;text-align:center}
+    .inner .title h1{font-size: 36px;font-weight: 700;color: rgb(38, 29, 13);margin-bottom: 10px;font-family: 黑体;}
+    .inner .title .info{margin-top:10px;margin-bottom:20px;color:#999;font-size:14px;line-height:25px}
     .inner .title span{display:inline-block;padding:0 10px}
     .inner .operatetop{display:none}
     .inner .operate{height:74px;background-color:#b8b4a5;line-height:74px}
