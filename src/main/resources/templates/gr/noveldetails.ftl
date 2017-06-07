@@ -45,7 +45,9 @@
         <div class="article">
             <div class="inner" id="BookCon">
                 <div class="title">
-                    <h1>${noveldetails.novel.name} ${noveldetails.title}</h1>
+                    <div class="novel_info" >
+                        <h1 class="novel_name">${noveldetails.novel.name}</h1><h1 class="novel_title">${noveldetails.title}</h1>
+                    </div>
                     <div class="info">
                         <span>小说：<a href="${basePath}/novel/${noveldetails.novel.id}.html" title="${noveldetails.novel.name}">${noveldetails.novel.name}</a></span>
                         <span>作者：${noveldetails.novel.author}</a></span>

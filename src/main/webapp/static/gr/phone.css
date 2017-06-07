@@ -131,7 +131,8 @@
     .details{padding:0 15px;border:1px solid #ddd}
     .novellabel{height:16px;width:4px;background:#ff9d00;margin-left:12px;display:inline-block;vertical-align:middle;margin-bottom:2px}
     .article .inner{background:#f6f4ec}
-    .article h1{height:40px;line-height:40px;font-size:20px;font-weight:700;text-align:center;padding:10px 0 5px;}
+    .article .novel_info{line-height:40px;font-size:20px;font-weight:700;text-align:center;padding:10px 0 10px;}
+    .article .novel_info h1{display:inline-block; height:30px;line-height:30px;font-size:20px;font-weight:700;text-align:center;padding:0 5px;}
     .article .link{border-top:1px dotted #ccc;text-align:center;line-height:36px;color:gray;clear:both}
     .article .xb{border-top:none}
     .article .link a{margin:0 10px;color:#007E8C}
@@ -301,8 +302,8 @@
     .lastnovel {display: none;}
     #hotcontent .l .item{width:98%;float:left;padding:5px}
     #hotcontent .l .item dl{padding:5px;float:right;width:60%;text-align:left}
-    .article #BookText{font-size:18px;padding:5px;margin-bottom:20px}
-    .article p{margin:10px;clear:both;line-height:1.6;text-indent:2em;color:#222222;}
+    .article #BookText{font-size:20px;padding:5px;margin-bottom:20px}
+    .article p{margin:5px;clear:both;line-height:1.6;text-indent:2em;color:#222222;}
     .post_list li img{width:90%;height:auto}
     .post_list li .info{padding:0 10px;width:90%}
     .inner .operate li.last{width:33.2%;border-right:none}

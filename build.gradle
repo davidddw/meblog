@@ -22,7 +22,7 @@ ospackage {
     packageName 'panzer'
     packageDescription 'Myblog for d05660'
     packageGroup 'Application/System'
-    version '1.3.12'
+    version '1.3.13'
     user 'root'
     packager 'CentOS BuildSystem <http://bugs.centos.org>'
     release '1'

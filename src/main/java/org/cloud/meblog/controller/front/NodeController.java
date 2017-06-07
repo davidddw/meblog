@@ -52,6 +52,7 @@ import java.util.Map;
 
 /**
  * Created by d05660ddw on 2017/3/20.
+ * novel handler
  */
 @Controller
 public class NodeController extends FrontBaseController {

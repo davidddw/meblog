@@ -578,6 +578,4 @@ $(document).ready(function () {
         data_container: $('#novels-data-container'),
         template: novels_template
     });
-
-
 });
