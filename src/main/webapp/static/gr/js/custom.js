@@ -210,15 +210,7 @@ function initGallery() {
         rel: 'liveDemo',
         lastRow: 'nojustify',
         captions: true,
-        randomize: false,
-        sizeRangeSuffixes: {
-            lt100: '_t',
-            lt240: '',
-            lt320: '_n',
-            lt500: '',
-            lt640: '_z',
-            lt1024: '_b'
-        }
+        randomize: false
     }).on('jg.complete', function () {
         $(this).lightGallery({
             loop: true,

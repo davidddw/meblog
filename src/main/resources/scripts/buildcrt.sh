@@ -71,7 +71,6 @@ server {
 
 server {
     listen 80 default_server;
-    listen [::]:80 default_server;
     server_name _;
     location ^~ /.well-known/acme-challenge/ {
         alias /var/www/challenges/;
@@ -84,9 +83,9 @@ EOF
 cat << EEF > /usr/local/letsEncrypt/renew_cert.sh
 #!/bin/bash
 mkdir -p /etc/nginx/includes/
-/usr/bin/cp /usr/local/letsEncrypt/ssl-all-servers /etc/nginx/includes/ssl-all-servers
-/usr/bin/cp /usr/local/letsEncrypt/nossl.conf /etc/nginx/conf.d/ssl.conf
-systemctl reload nginx
+/bin/cp /usr/local/letsEncrypt/ssl-all-servers.conf /etc/nginx/includes/ssl-all-servers.conf
+/bin/cp /usr/local/letsEncrypt/nossl.conf /etc/nginx/conf.d/ssl.conf
+service nginx reload
 python /usr/local/letsEncrypt/acme_tiny.py --account-key /usr/local/letsEncrypt/account.key \
     --csr /usr/local/letsEncrypt/wwwd05660.csr --acme-dir /var/www/challenges/ > /tmp/wwwsigned.crt || exit
 python /usr/local/letsEncrypt/acme_tiny.py --account-key /usr/local/letsEncrypt/account.key \
@@ -94,8 +93,8 @@ python /usr/local/letsEncrypt/acme_tiny.py --account-key /usr/local/letsEncrypt/
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > /tmp/intermediate.pem
 cat /tmp/wwwsigned.crt /tmp/intermediate.pem >/etc/nginx/cert/wwwd05660.pem
 cat /tmp/signed.crt /tmp/intermediate.pem >/etc/nginx/cert/d05660.pem
-/usr/bin/cp /usr/local/letsEncrypt/ssl.conf /etc/nginx/conf.d/ssl.conf
-systemctl reload nginx
+/bin/cp /usr/local/letsEncrypt/ssl.conf /etc/nginx/conf.d/ssl.conf
+service nginx reload
 EEF
 
 sed -i "/renew_cert/d" /etc/crontab

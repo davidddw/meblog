@@ -22,7 +22,7 @@ ospackage {
     packageName 'panzer'
     packageDescription 'Myblog for d05660'
     packageGroup 'Application/System'
-    version '1.3.14'
+    version '1.3.16'
     user 'root'
     packager 'CentOS BuildSystem <http://bugs.centos.org>'
     release '1'
@@ -69,13 +69,31 @@ ospackage {
     from('build/resources/main/scripts/meblog.service') {
         addParentDirs = false
         fileMode 0754
-        into '/usr/lib/systemd/system'
+        into 'bin'
+    }
+
+    from('build/resources/main/scripts/meblog') {
+        addParentDirs = false
+        fileMode 0754
+        into 'bin'
+    }
+
+    from('build/resources/main/scripts/update_c6.sh') {
+        addParentDirs = false
+        fileMode 0754
+        into 'bin'
+    }
+
+    from('build/resources/main/scripts/update_c7.sh') {
+        addParentDirs = false
+        fileMode 0754
+        into 'bin'
     }
 
     from('build/resources/main/conf/ssl.conf') {
         addParentDirs = false
         fileMode 0640
-        into '/etc/nginx/conf.d/'
+        into 'conf'
     }
 
     from('build/resources/main/conf/d05660.key') {
@@ -151,7 +169,9 @@ sourceSets {
     }
 }
 
-
+ext {
+    springBootVersion = '1.5.4.RELEASE'
+}
 
 jar {
     baseName = 'meblog'
@@ -159,12 +179,12 @@ jar {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web:1.5.4.RELEASE",
-            "org.springframework.boot:spring-boot-starter-jdbc:1.5.4.RELEASE",
-            "org.springframework.boot:spring-boot-starter-aop:1.5.4.RELEASE",
-            "org.springframework.boot:spring-boot-starter-freemarker:1.5.4.RELEASE",
-            "org.springframework.boot:spring-boot-starter-security:1.5.4.RELEASE",
-            "org.springframework.boot:spring-boot-devtools:1.5.4.RELEASE",
+    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion",
+            "org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion",
+            "org.springframework.boot:spring-boot-starter-aop:$springBootVersion",
+            "org.springframework.boot:spring-boot-starter-freemarker:$springBootVersion",
+            "org.springframework.boot:spring-boot-starter-security:$springBootVersion",
+            "org.springframework.boot:spring-boot-devtools:$springBootVersion",
             "com.alibaba:druid:1.0.31",
             "com.alibaba:fastjson:1.2.32",
             "org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0",
@@ -182,7 +202,7 @@ dependencies {
             "org.apache.lucene:lucene-highlighter:6.6.0",
             "org.lionsoul:jcseg-analyzer:2.1.1",
     )
-    compile ("org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE") {
+    compile ("org.springframework.boot:spring-boot-starter-test:$springBootVersion") {
         exclude group: 'junit', module: 'junit'
     }
 }
